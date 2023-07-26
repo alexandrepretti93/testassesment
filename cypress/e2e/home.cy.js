@@ -1,7 +1,7 @@
 import home from '../support/pages/home'
 import signup from '../support/pages/signup'
 import login from '../support/pages/login'
-import phones from '../support/pages/phones'
+import products from '../support/pages/products'
 import cart from '../support/pages/cart'
 
 describe('Home buttons', () => {
@@ -10,7 +10,7 @@ describe('Home buttons', () => {
     })
     
   
-  xit('Test 1', () => {
+  it('Test 1', () => {
         home.clickSignUpBtn()
         signup.fillSignUpData()
         home.clickSignUpBtn()
@@ -23,47 +23,52 @@ describe('Home buttons', () => {
         login.fillLoginInvalidData()
   })
 
-  xit('Test 2', () => {
+  it('Test 2', () => {
     home.clickLogInBtn()
     login.fillLoginData()
     home.goToPhones()
-    phones.clickOnGalaxyS6()
-    phones.clickAddToCart()
+    products.clickOnGalaxyS6()
+    products.clickAddToCart()
     home.clickHomeBtn()
     home.goToPhones()
-    phones.clickOnNexus6()
-    phones.clickAddToCart()
+    products.clickOnNexus6()
+    products.clickAddToCart()
     home.goToCart()
     cart.deleteRandomFromList()
     cart.clickPlaceOrderBtn()
     cart.fillOrderData()
     cart.clickOnPurchaseBtn()
+    cart.clickOkAfterPurchase()
 })
 
-  xit('Test 3', () => {
+  it('Test 3', () => {
     home.clickLogInBtn()
     login.fillLoginData()
     home.goToPhones()
-    phones.clickOnGalaxyS6()
-    phones.clickAddToCart()
+    products.clickOnGalaxyS6()
+    products.clickAddToCart()
     home.clickHomeBtn()
     home.goToPhones()
-    phones.clickOnNexus6()
-    phones.clickAddToCart()
+    products.clickOnNexus6()
+    products.clickAddToCart()
     home.goToCart()
     cart.deleteRandomFromList()
     cart.clickPlaceOrderBtn()
     cart.fillOrderData()
     cart.clickOnPurchaseBtn()
     cart.ValidatePurchaseInfo()
+    cart.clickOkAfterPurchase()
   })
   
   it('Test 4', () => {
     home.clickLogInBtn()
     login.fillLoginData()
     home.goToPhones()
+    products.validatePhonesItems()
     home.goToLaptops()
+    products.validateLaptopsItems()
     home.goToMonitors()
+    products.validateMonitorsItems()
   })
 
 

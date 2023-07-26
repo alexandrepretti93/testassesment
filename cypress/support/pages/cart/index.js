@@ -44,6 +44,10 @@ class Cart {
         //this.elements.okBtn().click();
     }
 
+    clickOkAfterPurchase(){
+        this.elements.okBtn().click();
+    }
+
     clickPlaceOrderBtn(){
         this.elements.placeOrderBtn().click();
         cy.get('h5', { timeout: 10000 }).contains('Place order').should('be.visible')

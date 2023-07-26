@@ -9,7 +9,11 @@ class Home {
         phonesBtn: () => cy.get('a').contains('Phones'),
         laptopsBtn: () => cy.get('a').contains('Laptops'),
         monitorsBtn: () => cy.get('a').contains('Monitors'),
-        homeBtn: () => cy.get('a').contains('Home')
+        homeBtn: () => cy.get('a').contains('Home'),
+        categoriesTitle: () => cy.get('[id=cat]'),
+        previousBtn: () => cy.get('[id=prev2]'),
+        nextBtn: () => cy.get('[id=next2]'),
+        cardBlocksList: () => cy.get('[class="card h-100"]')
     }
 
     goToHomePage(){
@@ -56,6 +60,7 @@ class Home {
         this.elements.cartBtn().click();
         cy.get('h2', { timeout: 12000 }).contains('Products').should('be.visible')
     }
+
     
 }
 
