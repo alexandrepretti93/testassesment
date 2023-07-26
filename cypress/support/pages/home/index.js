@@ -2,17 +2,17 @@
 class Home {
     
     elements ={
-        signUpBtn: () => cy.get('[id=signin2]'),
-        cartBtn: () => cy.get('[id=cartur]'),
-        loginBtn: () => cy.get('[id=login2]'),
-        logoutBtn: () => cy.get('[id=logout2]'),
-        phonesBtn: () => cy.get('a').contains('Phones'),
-        laptopsBtn: () => cy.get('a').contains('Laptops'),
-        monitorsBtn: () => cy.get('a').contains('Monitors'),
+        signUpBtn: () => cy.get('#signin2'),
+        cartBtn: () => cy.get('#cartur'),
+        loginBtn: () => cy.get('#login2'),
+        logoutBtn: () => cy.get('#logout2'),
+        phonesBtn: () => cy.get('[onclick="byCat(\'phone\')"]'),
+        laptopsBtn: () => cy.get('[onclick="byCat(\'notebook\')"]'),
+        monitorsBtn: () => cy.get('[onclick="byCat(\'monitor\')"]'),
         homeBtn: () => cy.get('a').contains('Home'),
-        categoriesTitle: () => cy.get('[id=cat]'),
-        previousBtn: () => cy.get('[id=prev2]'),
-        nextBtn: () => cy.get('[id=next2]'),
+        categoriesTitle: () => cy.get('#cat'),
+        previousBtn: () => cy.get('#prev2'),
+        nextBtn: () => cy.get('#next2'),
         cardBlocksList: () => cy.get('[class="card h-100"]')
     }
 
