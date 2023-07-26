@@ -4,7 +4,7 @@ import login from '../support/pages/login'
 import products from '../support/pages/products'
 import cart from '../support/pages/cart'
 
-describe('Home buttons', () => {
+describe('Testing', () => {
   beforeEach(() => {
       home.goToHomePage()
     })
