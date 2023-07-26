@@ -9,6 +9,7 @@ class Home {
         phonesBtn: () => cy.get('a').contains('Phones'),
         laptopsBtn: () => cy.get('a').contains('Laptops'),
         monitorsBtn: () => cy.get('a').contains('Monitors'),
+        homeBtn: () => cy.get('a').contains('Home')
     }
 
     goToHomePage(){
@@ -43,6 +44,17 @@ class Home {
     goToMonitors(){
         
         this.elements.monitorsBtn().click();
+    }
+
+    clickHomeBtn(){
+        
+        this.elements.homeBtn().click();
+    }
+
+    goToCart(){
+        
+        this.elements.cartBtn().click();
+        cy.get('h2', { timeout: 12000 }).contains('Products').should('be.visible')
     }
     
 }
