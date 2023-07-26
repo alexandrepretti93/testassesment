@@ -39,3 +39,7 @@ npx cypress open
 
 * Go to Specs and run the tests
 
+### 5. Organization
+
+The 5 tests cases are located in e2e/tests.cy.js
+The pages with locator mapping and functions are on support/pages
